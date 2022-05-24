@@ -1,0 +1,7 @@
+beetrootblog:
+  path: '/beetrootblog'
+  defaults:
+    _title: 'BeetrootBlog page title'
+    _controller: '\Drupal\beetrootblog\Controller\BeetrootblogController::build'
+  requirements:
+    _permission: 'access content'

@@ -1,0 +1,4 @@
+administer beetrootblog configuration:
+  title: 'Administer beetrootblog configuration'
+  description: 'Optional description.'
+  restrict access: true

@@ -1,0 +1,6 @@
+name: BeetrootBlog
+type: module
+description: Create first page
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
