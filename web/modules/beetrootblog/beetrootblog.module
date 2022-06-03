@@ -1,10 +1,40 @@
 <?php
 
-/**
- * @file
- * Primary module hooks for BeetrootBlog module.
- *
- * @DCG
- * This file is no longer required in Drupal 8.
- * @see https://www.drupal.org/node/2217931
- */
+    use Drupal\Core\Access\AccessResult;
+    use Drupal\Core\Datetime\DrupalDateTime;
+    use Drupal\Core\Entity\EntityInterface;
+    use Drupal\Core\Session\AccountInterface;
+    use Drupal\node\Plugin\views\filter\Access;
+
+    /**
+     * Implements hook_theme().
+     */
+
+    function beetrootblog_theme($existing, $type, $theme, $path) {
+        return [
+            'beetrootblog_news' => [
+                'variables' => [
+                    'title' => NULL,
+                    'content' => NULL,
+                    'link' => NULL,
+                ],
+            ],
+            'beetrootblog_news_link' => [
+                'variables' => [
+                    'url' => NULL,
+                    'title' => NULL,
+                ],
+            ],
+        ];
+    }
+
+    /**
+     * Implements hook_entity_access().
+     */
+    function beetrootblog_entity_access(EntityInterface $entity, $operation, AccountInterface $account) {
+        if ($operation == 'view' && $entity->getEntityTypeId() == 'node') {
+            return AccessResult::forbiddenif($account->isAnonymous());
+        }
+        return AccessResult::neutral();
+    }
+     

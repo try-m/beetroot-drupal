@@ -1,0 +1,21 @@
+name: BeetrootBlog Theme
+type: theme
+base theme: beetrootblog
+description: An theme for BeetrootBlog
+package: Custom
+core: 8.x
+core_version_requirement: ^8 || ^9
+libraries:
+  -beetrootblog_theme/global
+regions:
+  header: 'Header'
+  primary_menu: 'Primary menu'
+  second_menu: 'Second menu'
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  featured: 'Featured'
+  breadcrumb: 'Breadcrumb'
+  content: 'Content'
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar secound'
+  footer: 'Footer'
