@@ -779,7 +779,10 @@ $databases['default']['default'] = array (
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-$settings['config_sync_directory'] = 'sites/default/files/config_tvej7iXXin-wtWhiFgdcaJDkNWyvKeRT4VDA-ss09G74l2tsC2UaGK2UVScH-GdOQgmyIBVlkg/sync';
+$settings['config_sync_directory'] = '../config';
+// $settings['config_sync_directory'] = 'sites/default/files/config_tvej7iXXin-wtWhiFgdcaJDkNWyvKeRT4VDA-ss09G74l2tsC2UaGK2UVScH-GdOQgmyIBVlkg/sync';
+$settings['trusted_host_patterns'][] = getenv('PROJECT_BASE_URL');
+$settings['skip_permissions_hardening'] = TRUE;
 
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
