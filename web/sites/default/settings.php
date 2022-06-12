@@ -771,14 +771,12 @@ $databases['default']['default'] = array (
   'username' => 'drupal',
   'password' => 'drupal',
   'prefix' => '',
-  'host' => 'mariadb',
+  'host' => 'database',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',
 );
-
-$settings['config_sync_directory'] = 'sites/default/files/config_tvej7iXXin-wtWhiFgdcaJDkNWyvKeRT4VDA-ss09G74l2tsC2UaGK2UVScH-GdOQgmyIBVlkg/sync';
-
 if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+$settings['config_sync_directory'] = 'sites/default/files/config_tvej7iXXin-wtWhiFgdcaJDkNWyvKeRT4VDA-ss09G74l2tsC2UaGK2UVScH-GdOQgmyIBVlkg/sync';

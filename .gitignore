@@ -58,3 +58,7 @@
 
 # Ignore database
 /mariadb
+
+# Ignore forntend deps.
+web/themes/custom/beetrootblog_theme/node_modules/
+web/themes/custom/beetrootblog_theme/dist/
